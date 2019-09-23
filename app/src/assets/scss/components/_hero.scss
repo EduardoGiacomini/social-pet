@@ -1,0 +1,14 @@
+.hero {
+    &__box {
+        background-color: var(--color-primary);
+        padding-bottom: 6rem;
+        border-radius: 0 0 180rem 180rem;
+    }
+
+    &__icon {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+}
