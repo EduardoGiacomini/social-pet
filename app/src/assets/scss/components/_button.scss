@@ -1,18 +1,24 @@
 .button {
-    display: inline-block;
-    font-size: 2rem;
-    font-family: inherit;
-    font-weight: 700;
-    letter-spacing: .08rem;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border-radius: 18rem;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    border: none;
-    padding: 1.5rem 3rem;
-    transition: all .2s;
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 2rem;
+        font-family: inherit;
+        font-weight: 700;
+        letter-spacing: .08rem;
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-radius: 18rem;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border: none;
+        padding: 1.5rem 3rem;
+        transition: all .2s;
 
-    cursor: pointer;
+        cursor: pointer;
+    }
 
     &:hover {
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
