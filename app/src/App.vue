@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Greetings from './views/Greetings/Greetings'
+import Greetings from './views/public/Greetings/Greetings'
 export default {
   name: 'app',
   components: {

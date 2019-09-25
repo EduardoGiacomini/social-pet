@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hero__box">
-      <img class="hero__icon" alt="Social Pet Hero" src="../../assets/icons/hero.svg">
+      <img class="hero__icon" alt="Social Pet Hero" src="@/assets/icons/hero.svg">
     </div>
     <div class="container">
       <div class="mb4">
