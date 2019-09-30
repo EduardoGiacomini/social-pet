@@ -3,5 +3,9 @@
 .full-width { width: 100%; }
 .center-text { width: 100%; text-align: center; }
 
+.move-in-top { animation: move-in-top 1s ease-out; }
+.move-in-left { animation: move-in-left 1s ease-out; }
+.move-in-right { animation: move-in-right 1s ease-out; }
+
 .mb2 { margin-bottom: 2rem; }
 .mb4 { margin-bottom: 4rem; }
