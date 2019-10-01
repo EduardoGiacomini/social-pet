@@ -1,0 +1,23 @@
+.step {
+    display: flex;
+    padding: 1rem 2rem;
+
+    &-stage {
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--color-gray);
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--active {
+            background-color: var(--color-primary);
+        }
+    }
+
+    &-stage:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
