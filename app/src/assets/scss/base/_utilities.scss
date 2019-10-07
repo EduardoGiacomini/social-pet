@@ -2,6 +2,7 @@
 
 .full-width { width: 100%; }
 .center-text { width: 100%; text-align: center; }
+.center-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 .move-in-top { animation: move-in-top 1s ease-out; }
 .move-in-left { animation: move-in-left 1s ease-out; }
@@ -9,3 +10,4 @@
 
 .mb2 { margin-bottom: 2rem; }
 .mb4 { margin-bottom: 4rem; }
+.ml2 { margin-left: 2rem; }
