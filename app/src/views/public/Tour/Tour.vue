@@ -10,21 +10,16 @@
       <div v-else></div>
       <button class="button__link" @click="setTourCompleted">Pular</button>
     </div>
-    <div class="tour__content">
-      <img class="tour__content--icon" :alt="tour[activeStage].iconAlt" :src="tour[activeStage].icon">
-      <div>
-        <h1 class="title center-text">{{tour[activeStage].title}}</h1>
-        <p class="subtitle center-text">{{tour[activeStage].subtitle}}</p>
-      </div>
-    </div>
+    <transition name="fade" mode="out-in">
+      <TourContent v-if="activeStage === 0" :tour="tour[activeStage]" :key="tour[activeStage].title"/>
+      <TourContent v-if="activeStage === 1" :tour="tour[activeStage]" :key="tour[activeStage].title"/>
+      <TourContent v-if="activeStage === 2" :tour="tour[activeStage]" :key="tour[activeStage].title"/>
+    </transition>
     <div class="tour__menu-bottom">
       <div class="step ml2">
-        <span v-if="activeStage === 0" class="step__stage step__stage--active"></span>
-        <span v-else class="step__stage"></span>
-        <span v-if="activeStage === 1" class="step__stage step__stage--active"></span>
-        <span v-else class="step__stage"></span>
-        <span v-if="activeStage === 2" class="step__stage step__stage--active"></span>
-        <span v-else class="step__stage"></span>
+        <span :class="activeStage === 0 ? 'step__stage step__stage--active' : 'step__stage'" @click="changeStage(0)"></span>
+        <span :class="activeStage === 1 ? 'step__stage step__stage--active' : 'step__stage'" @click="changeStage(1)"></span>
+        <span :class="activeStage === 2 ? 'step__stage step__stage--active' : 'step__stage'" @click="changeStage(2)"></span>
       </div>
       <button class="button button--prox" @click="advanceStage">Próximo</button>
     </div>
@@ -35,6 +30,7 @@
 import router from '@/globals/router'
 import state from '@/commons/store'
 import mutationTypes from '@/commons/constants/mutation-types'
+import TourContent from './TourContent'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import Tour1Icon from '@/assets/icons/tour-1.svg'
@@ -44,6 +40,7 @@ import Tour3Icon from '@/assets/icons/tour-3.svg'
 export default {
   name: 'tour',
   components: {
+    TourContent,
     FontAwesomeIcon
   },
   data () {
@@ -75,6 +72,9 @@ export default {
     }
   },
   methods: {
+    changeStage (stage) {
+      this.activeStage = stage
+    },
     goBackStage () {
       this.activeStage -= 1
     },
@@ -99,3 +99,12 @@ export default {
   }
 }
 </script>
+
+<style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
