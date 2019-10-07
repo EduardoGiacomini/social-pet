@@ -10,7 +10,6 @@
       </div>
       <div class="move-in-top">
         <router-link class="button full-width mb2" to="/">Entrar</router-link>
-        <router-link class="button full-width mb2" to="/tutorial">Tutorial</router-link>
         <p class="subtitle center-text">Não tem uma conta? <router-link class="link" to="/create-user">Cadastre-se</router-link></p>
       </div>
     </div>
