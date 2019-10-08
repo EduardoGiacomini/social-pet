@@ -1,16 +1,17 @@
 .input {
     display: block;
-    padding: 1rem;
+    padding: 1.5rem;
     color: var(--color-gray-dark);
+    background-color: var(--color-gray-light);
     font-size: 1.6rem;
     font-weight: 700;
     font-family: inherit;
-    border: none;
-    border-radius: .6rem;
+    border: .2rem solid var(--color-gray-light);
+    border-radius: 1rem;
     transition: all .2s;
 
     &:focus {
         outline: none;
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border: .2rem solid var(--color-primary);
     }
 }

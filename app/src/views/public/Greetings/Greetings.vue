@@ -9,8 +9,8 @@
         <p class="subtitle move-in-left center-text">Curta e compartilhe momentos vivenciados ao lado do seu pet com amigos e familiares.</p>
       </div>
       <div class="move-in-top">
-        <router-link class="button full-width mb2" to="/">Entrar</router-link>
-        <p class="subtitle center-text">Não tem uma conta? <router-link class="link" to="/create-user">Cadastre-se</router-link></p>
+        <router-link class="button rounded full-width mb2" to="/">Entrar</router-link>
+        <p class="subtitle center-text">Não tem uma conta? <router-link class="link" to="/criar-conta">Cadastre-se</router-link></p>
       </div>
     </div>
   </div>

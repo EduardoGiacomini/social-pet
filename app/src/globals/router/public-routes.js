@@ -1,5 +1,5 @@
 import Greetings from '@/views/public/Greetings/Greetings.vue'
-import CreateUser from '@/views/public/CreateUser/CreateUser.vue'
+import Signup from '@/views/public/Signup/Signup.vue'
 import Tour from '@/views/public/Tour/Tour.vue'
 
 export default [
@@ -14,8 +14,8 @@ export default [
     component: Tour
   },
   {
-    path: '/create-user',
-    name: 'createUser',
-    component: CreateUser
+    path: '/criar-conta',
+    name: 'signup',
+    component: Signup
   }
 ]
