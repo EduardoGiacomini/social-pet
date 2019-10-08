@@ -1,0 +1,30 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 100vh;
+
+    &__back-button {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        &--link {
+            color: var(--color-gray-dark);
+        }
+    }
+
+    &__logo {
+        height: 15rem;
+        width: 15rem;
+
+        border-radius: 1.6rem;
+        padding: 2rem;
+        color: var(--color-gray-dark);
+        font-weight: 800;
+        border: .2rem solid var(--color-gray-dark);
+        font-size: 2rem;
+        text-align: center;
+    }
+}
