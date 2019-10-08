@@ -5,10 +5,28 @@
       </div>
       <div class="signup__logo mb2">LOGO</div>
       <p class="subtitle center-text mb2">Para criar sua conta de usuário, insira suas credenciais nos campos abaixo.</p>
-      <form>
-        <input class="input full-width mb2" type="text" placeholder="Nome" required>
-        <input class="input full-width mb2" type="email" placeholder="E-mail" required>
-        <input class="input full-width mb2" type="password" placeholder="Senha" required>
+      <form @submit="register">
+        <input
+          class="input full-width mb2"
+          v-model="name"
+          type="text"
+          placeholder="Nome"
+          required
+        >
+        <input
+          class="input full-width mb2"
+          v-model="email"
+          type="email"
+          placeholder="E-mail"
+          required
+        >
+        <input
+          class="input full-width mb2"
+          v-model="password"
+          type="password"
+          placeholder="Senha"
+          required
+        >
         <button type="submit" class="button full-width square mb2">Criar</button>
         <p class="subtitle center-text">Já possui uma conta? <router-link class="link" to="/criar-conta">Entrar</router-link></p>
       </form>
@@ -28,7 +46,15 @@ export default {
     return {
       icons: {
         faChevronLeft
-      }
+      },
+      name: null,
+      email: null,
+      password: null
+    }
+  },
+  methods: {
+    register (event) {
+      event.preventDefault()
     }
   }
 }

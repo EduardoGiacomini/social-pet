@@ -1,3 +1,1 @@
-export default {
-  SET_TOUR_COMPLETED: 'setTourCompleted'
-}
+export default {}

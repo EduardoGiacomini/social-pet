@@ -5,13 +5,14 @@
 </template>
 
 <script>
+import actionTypes from '@/commons/constants/action-types'
 import router from '@/globals/router'
 
 export default {
-  beforeCreate () {
-    const tourCompleted = localStorage.tourCompleted
+  async beforeCreate () {
+    const tourStatus = await this.$store.dispatch(actionTypes.VERIFY_TOUR_STATUS)
 
-    if (!tourCompleted) {
+    if (!tourStatus) {
       router.push({ name: 'tour' })
     }
   }
