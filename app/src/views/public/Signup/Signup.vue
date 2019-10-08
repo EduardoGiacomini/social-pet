@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import actionTypes from '@/commons/constants/action-types'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -53,8 +54,16 @@ export default {
     }
   },
   methods: {
-    register (event) {
+    async register (event) {
       event.preventDefault()
+
+      const user = {
+        name: this.name,
+        email: this.email,
+        password: this.password
+      }
+
+      await this.$store.dispatch(actionTypes.CREATE_ACCOUNT, user)
     }
   }
 }
