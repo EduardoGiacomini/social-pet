@@ -1,3 +1,3 @@
 export default {
-  tourCompleted: false
+  loading: false
 }
