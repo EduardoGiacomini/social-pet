@@ -8,7 +8,7 @@
         @click="goBackStage"
       />
       <div v-else></div>
-      <button class="button__link" @click="setTourCompleted">Pular</button>
+      <button class="button__link" @click="setTourCompletedSatus">Pular</button>
     </div>
     <transition name="fade" mode="out-in">
       <TourContent v-if="activeStage === 0" :tour="tour[activeStage]" :key="tour[activeStage].title"/>
@@ -28,8 +28,6 @@
 
 <script>
 import router from '@/globals/router'
-import state from '@/commons/store'
-import mutationTypes from '@/commons/constants/mutation-types'
 import TourContent from './TourContent'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
@@ -80,7 +78,7 @@ export default {
     },
     advanceStage () {
       if (this.lastActiveStage()) {
-        this.setTourCompleted()
+        this.setTourCompletedSatus()
       } else {
         this.activeStage += 1
       }
@@ -91,9 +89,8 @@ export default {
       }
       return false
     },
-    setTourCompleted () {
-      localStorage.tourCompleted = true
-      state.commit(mutationTypes.SET_TOUR_COMPLETED)
+    setTourCompletedSatus () {
+      localStorage.tourStatus = true
       router.push({ name: 'greetings' })
     }
   }

@@ -1,3 +1,3 @@
 export default {
-  SET_TOUR_COMPLETED: 'setTourCompleted'
+  SET_LOADING: 'setLoading'
 }

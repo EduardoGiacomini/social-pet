@@ -5,7 +5,7 @@ const Responder = require('../../commons/responder')
 const createUser = require('../../usecase/user/CreateUser')
 
 const schema = {
-  bod: {
+  body: {
     name: Joi.string().required(),
     email: Joi.string().required(),
     password: Joi.string().required()
