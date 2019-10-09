@@ -1,5 +1,8 @@
 <template>
   <div class="app">
+    <div v-if="this.$store.state.loading" class="loading">
+      <div class="loading__content"></div>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -14,6 +17,12 @@ export default {
 
     if (!tourStatus) {
       router.push({ name: 'tour' })
+    }
+  },
+  computed: {
+    loadingStatus () {
+      console.log(this.$store.loading)
+      return this.$store.loading
     }
   }
 }

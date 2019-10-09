@@ -63,7 +63,9 @@ export default {
         password: this.password
       }
 
-      await this.$store.dispatch(actionTypes.CREATE_ACCOUNT, user)
+      const response = await this.$store.dispatch(actionTypes.CREATE_ACCOUNT, user)
+
+      console.log(response)
     }
   }
 }

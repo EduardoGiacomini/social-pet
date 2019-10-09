@@ -1,14 +1,14 @@
 import axios from 'axios'
 import actionTypes from '@/commons/constants/action-types'
+import mutationTypes from '@/commons/constants/mutation-types'
 
 export default {
-  async [actionTypes.CREATE_ACCOUNT] ({ dispatch }, user) {
+  async [actionTypes.CREATE_ACCOUNT] ({ commit }, user) {
     try {
       const { data } = await axios.post(`http://localhost:3000/api/user`, user)
-      // await dispatch(actionTypes.AFTER_LOGIN, data)
-      console.log(data)
+      commit(mutationTypes.SET_USER, data)
+      return data
     } catch (error) {
-      console.log(error)
       return error
     }
   },
