@@ -1,8 +1,6 @@
 <template>
   <div class="app">
-    <div v-if="this.$store.state.loading" class="loading">
-      <div class="loading__content"></div>
-    </div>
+    <Loading v-if="loadingStatus"/>
     <router-view/>
   </div>
 </template>
@@ -11,7 +9,12 @@
 import actionTypes from '@/commons/constants/action-types'
 import router from '@/globals/router'
 
+import Loading from '@/commons/components/Loading.vue'
+
 export default {
+  components: {
+    Loading
+  },
   async beforeCreate () {
     const tourStatus = await this.$store.dispatch(actionTypes.VERIFY_TOUR_STATUS)
 
@@ -21,8 +24,7 @@ export default {
   },
   computed: {
     loadingStatus () {
-      console.log(this.$store.loading)
-      return this.$store.loading
+      return this.$store.state.loading
     }
   }
 }
