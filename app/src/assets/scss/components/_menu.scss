@@ -1,0 +1,46 @@
+.menu {
+  background-color: var(--color-white);
+  width: 4rem;
+  height: 4rem;
+
+  &__hamburguer {
+    display: block;
+    position: relative;
+    background: var(--color-gray-dark);
+    width: 3.5rem;
+    height: .4rem;
+    border-radius: 1rem;
+    top: 1.2rem;
+    left: .2rem;
+
+    transition: .5s ease-in-out;
+  }
+
+  &__hamburguer:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--color-gray-dark);
+    width: 60%;
+    height: 100%;
+    border-radius: 1rem;
+    top: 1rem;
+
+    transition: .5s ease-in-out;
+  }
+
+  &__check {
+    display: none;
+  }
+  
+  &__check:checked ~ label &__hamburguer {
+    width: 80%;
+    transform: rotate(45deg);
+  }
+  
+  &__check:checked ~ label &__hamburguer:before {
+    width: 100%;
+    top: 0;
+    transform: rotate(-90deg);
+  }
+}
