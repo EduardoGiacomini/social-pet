@@ -5,10 +5,11 @@
       </div>
       <div class="signup__logo mb2">LOGO</div>
       <p class="subtitle center-text mb2">Para criar sua conta de usuário, insira suas credenciais nos campos abaixo.</p>
-      <form @submit="register">
+      <form class="full-width" @submit="register">
         <input
           class="input full-width mb2"
           v-model="name"
+          name="name"
           type="text"
           placeholder="Nome"
           required
@@ -16,6 +17,7 @@
         <input
           class="input full-width mb2"
           v-model="email"
+          name="email"
           type="email"
           placeholder="E-mail"
           required
@@ -23,6 +25,7 @@
         <input
           class="input full-width mb2"
           v-model="password"
+          name="password"
           type="password"
           placeholder="Senha"
           required
