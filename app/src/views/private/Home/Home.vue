@@ -1,11 +1,13 @@
 <template>
   <div class="container">
-    <Menu/>
     <div class="mb2">
-      <h1 class="title">Olá Eduardo!</h1>
+      <Menu/>
+    </div>
+    <div class="mb2">
+      <h1 class="title">Olá, Eduardo!</h1>
       <p class="subtitle">O que vamos descobrir hoje?</p>
     </div>
-    <form>
+    <form class="mb2">
       <div class="input-icon">
         <font-awesome-icon class="input-icon__icon" size="2x" :icon="icons.faSearch"/>
         <input
@@ -16,6 +18,27 @@
         >
       </div>
     </form>
+    <div class="home">
+      <span class="subtitle home__subtitle">Destaques</span>
+      <div class="stories">
+        <div class="stories__item">
+          <img class="stories__item--image" :src="icons.cachorro" alt="Storie 1">
+          <span class="stories__item--title">Meg e Imperatriz</span>
+          <span class="stories__item--subtitle">79 likes</span>
+          <div class="stories__item--blur"></div>
+        </div>
+        <div class="stories__item">
+          <img class="stories__item--image" src="https://via.placeholder.com/150x80" alt="Storie 1">
+          <span class="stories__item--title">Meg e Imperatriz</span>
+          <span class="stories__item--subtitle">79 likes</span>
+        </div>
+        <div class="stories__item">
+          <img class="stories__item--image" src="https://via.placeholder.com/150x80" alt="Storie 1">
+          <span class="stories__item--title">Meg e Imperatriz</span>
+          <span class="stories__item--subtitle">79 likes</span>
+        </div>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -23,6 +46,7 @@
 import Menu from '@/commons/components/Menu.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import cachorro from '@/assets/icons/cachorro.jpg'
 
 export default {
   components: {
@@ -32,7 +56,7 @@ export default {
   data () {
     return {
       icons: {
-        faSearch
+        faSearch, cachorro
       }
     }
   }
