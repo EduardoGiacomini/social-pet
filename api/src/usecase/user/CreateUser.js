@@ -12,8 +12,8 @@ class CreateUser {
     }
   }
 
-  checkUserExists (email) {
-    const userExists = userBO.findByEmail(email)
+  async checkUserExists (email) {
+    const userExists = await userBO.findByEmail(email)
     if (userExists) {
       const error = new Error()
       error.message = `Já existe uma conta de usuário com o e-mail ${email}`
