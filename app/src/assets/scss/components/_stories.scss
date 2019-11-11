@@ -5,52 +5,32 @@
   border-radius: var(--border-radius);
 
   &__item {
-    overflow: auto;
     position: relative;
+    overflow: hidden;
     display: inline-block;
-    width: 15rem;
-    border-radius: var(--border-radius);
+    width: 8.5rem;
 
-    &--image {
-      border-radius: var(--border-radius);
-      width: 100%;
-    }
-
-    &--title {
-      position: absolute;
-      top: .5rem;
-      left: .5rem;
-
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: .03rem;
-      line-height: 1.2;
-      color: var(--color-white);
-
-      z-index: 1;
-    }
-
-    &--subtitle {
-      position: absolute;
-      bottom: .75rem;
-      right: .5rem;
-
-      font-weight: 300;
-      font-size: 1.6rem;
-      letter-spacing: .03rem;
-      line-height: 1.2;
-      color: var(--color-white);
-
-      z-index: 1;
-    }
-
-    &--blur {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, .3);
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-overflow: ellipsis;
+    
+      &--image {
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+      }
+  
+      &--title {
+        font-weight: 800;
+        font-size: 1.3rem;
+        letter-spacing: .03rem;
+        line-height: 1.2;
+        color: var(--color-gray-dark);
+  
+        z-index: 1;
+      }
     }
   }
 

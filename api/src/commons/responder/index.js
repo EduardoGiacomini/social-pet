@@ -13,24 +13,20 @@ class Responder {
     this.next()
   }
 
-  error (err) {
-    err.status = 400
-    this.next(err)
+  error (error) {
+    this.res.status(400).json(error);
   }
 
-  internalError (err) {
-    err.status = 500
-    this.next(err)
+  internalError (error) {
+    this.res.status(500).json(error)
   }
 
-  notFound (err) {
-    err.status = 404
-    this.next(err)
+  notFound (error) {
+    this.res.status(404).json(error)
   }
 
-  unauthorized (err) {
-    err.status = 401
-    this.next(err)
+  unauthorized (error) {
+    this.res.status(401).json(error)
   }
 }
 

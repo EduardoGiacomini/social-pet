@@ -22,20 +22,28 @@
       <span class="subtitle home__subtitle">Destaques</span>
       <div class="stories">
         <div class="stories__item">
-          <img class="stories__item--image" :src="icons.cachorro" alt="Storie 1">
-          <span class="stories__item--title">Meg e Imperatriz</span>
-          <span class="stories__item--subtitle">79 likes</span>
-          <div class="stories__item--blur"></div>
+          <div class="stories__item-content">
+            <img class="stories__item-content--image" :src="icons.avatar" alt="Storie 1">
+            <span class="stories__item-content--title">nome_usuário</span>
+          </div>
         </div>
         <div class="stories__item">
-          <img class="stories__item--image" src="https://via.placeholder.com/150x80" alt="Storie 1">
-          <span class="stories__item--title">Meg e Imperatriz</span>
-          <span class="stories__item--subtitle">79 likes</span>
+          <div class="stories__item-content">
+            <img class="stories__item-content--image" :src="icons.avatar" alt="Storie 1">
+            <span class="stories__item-content--title">nome_usuário</span>
+          </div>
         </div>
         <div class="stories__item">
-          <img class="stories__item--image" src="https://via.placeholder.com/150x80" alt="Storie 1">
-          <span class="stories__item--title">Meg e Imperatriz</span>
-          <span class="stories__item--subtitle">79 likes</span>
+          <div class="stories__item-content">
+            <img class="stories__item-content--image" :src="icons.avatar" alt="Storie 1">
+            <span class="stories__item-content--title">nome_usuário</span>
+          </div>
+        </div>
+        <div class="stories__item">
+          <div class="stories__item-content">
+            <img class="stories__item-content--image" :src="icons.avatar" alt="Storie 1">
+            <span class="stories__item-content--title">nome_usuário</span>
+          </div>
         </div>
     </div>
     </div>
@@ -46,7 +54,6 @@
 import Menu from '@/commons/components/Menu.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import cachorro from '@/assets/icons/cachorro.jpg'
 
 export default {
   components: {
@@ -56,7 +63,8 @@ export default {
   data () {
     return {
       icons: {
-        faSearch, cachorro
+        faSearch,
+        avatar: 'https://i.pravatar.cc/75'
       }
     }
   }
