@@ -17,7 +17,7 @@ export default [
     component: Tour
   },
   {
-    path: '/criar-conta',
+    path: '/cadastrar-se',
     name: 'signup',
     component: Signup
   },

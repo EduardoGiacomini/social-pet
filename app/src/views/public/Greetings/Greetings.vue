@@ -10,7 +10,7 @@
       </div>
       <div class="move-in-top">
         <router-link class="button rounded full-width mb2" to="/">Entrar</router-link>
-        <p class="subtitle center-text">Não tem uma conta? <router-link class="link" to="/criar-conta">Cadastre-se</router-link></p>
+        <p class="subtitle center-text">Não tem uma conta? <router-link class="link" to="/cadastrar-se">Cadastre-se</router-link></p>
       </div>
     </div>
   </div>
