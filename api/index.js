@@ -6,4 +6,4 @@ const app = require('./src/index')
 const Server = require('./src/Server')
 
 const server = new Server(app)
-server.iniciar()
+server.start()

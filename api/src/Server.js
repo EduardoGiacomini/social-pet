@@ -7,14 +7,14 @@ class Server {
     this.app = app
   }
 
-  async iniciar () {
-    this.registrarEventosGLobais()
-    TimeZone.configurar()
-    await Database.conectar()
-    await this.iniciarAplicacao()
+  async start () {
+    this.registerGlobalsEvents()
+    TimeZone.setup()
+    await Database.connect()
+    await this.startApplication()
   }
 
-  registrarEventosGLobais () {
+  registerGlobalsEvents () {
     process.on('unhandledRejection', (reason, p) => {
       throw reason
     })
@@ -24,12 +24,12 @@ class Server {
     })
   }
 
-  async iniciarAplicacao () {
+  async startApplication () {
     return new Promise((resolve, reject) => {
       try {
-        const servidorOnline = http.createServer(this.app).listen(process.env.PORT || 3000, () => {
+        const server = http.createServer(this.app).listen(process.env.PORT || 3000, () => {
           console.info('Servidor iniciado na porta %s', process.env.PORT)
-          resolve(servidorOnline)
+          resolve(server)
         })
       } catch (err) {
         console.error('Erro ao tentar iniciar o servidor %s', err)

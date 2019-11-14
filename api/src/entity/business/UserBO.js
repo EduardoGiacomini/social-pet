@@ -6,7 +6,7 @@ class UserBO {
   }
 
   async findByEmail (email) {
-    return User.findOne({email: email})
+    return User.findOne({ email: email })
   }
 
   async update (user) {
