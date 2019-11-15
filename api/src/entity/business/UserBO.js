@@ -5,6 +5,10 @@ class UserBO {
     return User.create(user)
   }
 
+  async findByEmail (email) {
+    return User.findOne({ email: email })
+  }
+
   async update (user) {
     return User.updateOne({ _id: user._id }, user)
   }

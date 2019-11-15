@@ -9,8 +9,12 @@
 @import "components/hero";
 @import "components/button";
 @import "components/input";
+@import "components/loading";
+@import "components/menu";
 @import "components/step";
+@import "components/stories";
 
 @import "views/app";
+@import "views/home";
 @import "views/signup";
 @import "views/tour";

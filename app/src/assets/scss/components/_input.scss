@@ -1,17 +1,54 @@
 .input {
     display: block;
     padding: 1.5rem;
-    color: var(--color-gray-dark);
+    color: var(--color-gray);
     background-color: var(--color-gray-light);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     font-family: inherit;
     border: .2rem solid var(--color-gray-light);
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     transition: all .2s;
 
     &:focus {
         outline: none;
         border: .2rem solid var(--color-primary);
+    }
+
+    &::placeholder {
+        color: var(--color-gray);
+    }
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        position: absolute;
+        margin-left: 1.5rem;
+        color: var(--color-gray);
+    }
+
+    &__input {
+        display: block;
+        padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+        color: var(--color-gray-dark);
+        background-color: var(--color-gray-light);
+        font-size: 1.8rem;
+        font-weight: 700;
+        font-family: inherit;
+        border: .2rem solid var(--color-gray-light);
+        border-radius: var(--border-radius);
+        transition: all .2s;
+
+        &:focus {
+            outline: none;
+            border: .2rem solid var(--color-primary);
+        }
+
+        &::placeholder {
+            color: var(--color-gray);
+        }
     }
 }
