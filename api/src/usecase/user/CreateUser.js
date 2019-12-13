@@ -16,7 +16,7 @@ class CreateUser {
     const userExists = await userBO.findByEmail(email)
     if (userExists) {
       const error = new Error()
-      error.message = `Já existe uma conta de usuário com o e-mail ${email}`
+      error.message = 'DUPLICATED_USER'
       throw error
     }
   }

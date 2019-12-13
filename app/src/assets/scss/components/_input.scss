@@ -15,6 +15,10 @@
         border: .2rem solid var(--color-primary);
     }
 
+    &:focus:invalid {
+        border: .2rem solid var(--color-error);
+    }
+
     &::placeholder {
         color: var(--color-gray);
     }
@@ -45,6 +49,10 @@
         &:focus {
             outline: none;
             border: .2rem solid var(--color-primary);
+        }
+
+        &:focus:invalid {
+            border: .2rem solid var(--color-error);
         }
 
         &::placeholder {
